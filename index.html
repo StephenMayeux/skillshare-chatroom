@@ -44,88 +44,12 @@
         <div class="col-8 align-self-center">
           <div class="row">
             <div class="col-12 chat-content">
-              <ul>
-                <li>
-                  <div class="chat-bubble-user">
-                    <span><i class="fa fa-circle" aria-hidden="true"></i> Stephen <small>10:00 AM,Today</small> </span><br><br>
-                    <p>Lorem ipsum dolor sit ameeserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit ameeserunt mollit anim mollit anim laborum.
-                    Lorem ipsum dolor sit ameeserunt mollit anim id est laborum.</p>
-                  </div>
-                </li>
-                <li>
-                  <div class="chat-bubble-my-user">
-                    <span> <small>10:00 AM,Today</small>  Tanya <i class="fa fa-circle" aria-hidden="true"></i></span><br><br>
-                    <p>Lorem ipsum dolor sit ameeserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit ameeserunt mollit anim id est laborum.</p>
-                  </div>
-                </li>
-                <li>
-                  <div class="chat-bubble-user">
-                    <span><i class="fa fa-circle" aria-hidden="true"></i> Stephen <small>10:00 AM,Today</small> </span><br><br>
-                    <p>Lorem ipsum dolor sit ameeserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit ameeserunt mollit anim mollit anim laborum.
-                    Lorem ipsum dolor sit ameeserunt mollit anim id est laborum.</p>
-                  </div>
-                </li>
-                <li>
-                  <div class="chat-bubble-my-user">
-                    <span> <small>10:00 AM,Today</small>  Tanya <i class="fa fa-circle" aria-hidden="true"></i></span><br><br>
-                    <p>Lorem ipsum dolor sit ameeserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit ameeserunt mollit anim id est laborum.</p>
-                  </div>
-                </li>
-                <li>
-                  <div class="chat-bubble-user">
-                    <span><i class="fa fa-circle" aria-hidden="true"></i> Stephen <small>10:00 AM,Today</small> </span><br><br>
-                    <p>Lorem ipsum dolor sit ameeserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit ameeserunt mollit anim mollit anim laborum.
-                    Lorem ipsum dolor sit ameeserunt mollit anim id est laborum.</p>
-                  </div>
-                </li>
-                <li>
-                  <div class="chat-bubble-my-user">
-                    <span> <small>10:00 AM,Today</small>  Tanya <i class="fa fa-circle" aria-hidden="true"></i></span><br><br>
-                    <p>Lorem ipsum dolor sit ameeserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit ameeserunt mollit anim id est laborum.</p>
-                  </div>
-                </li>
-                <li>
-                  <div class="chat-bubble-user">
-                    <span><i class="fa fa-circle" aria-hidden="true"></i> Stephen <small>10:00 AM,Today</small> </span><br><br>
-                    <p>Lorem ipsum dolor sit ameeserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit ameeserunt mollit anim mollit anim laborum.
-                    Lorem ipsum dolor sit ameeserunt mollit anim id est laborum.</p>
-                  </div>
-                </li>
-                <li>
-                  <div class="chat-bubble-my-user">
-                    <span> <small>10:00 AM,Today</small>  Tanya <i class="fa fa-circle" aria-hidden="true"></i></span><br><br>
-                    <p>Lorem ipsum dolor sit ameeserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit ameeserunt mollit anim id est laborum.</p>
-                  </div>
-                </li>
-                <li>
-                  <div class="chat-bubble-user">
-                    <span><i class="fa fa-circle" aria-hidden="true"></i> Stephen <small>10:00 AM,Today</small> </span><br><br>
-                    <p>Lorem ipsum dolor sit ameeserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit ameeserunt mollit anim mollit anim laborum.
-                    Lorem ipsum dolor sit ameeserunt mollit anim id est laborum.</p>
-                  </div>
-                </li>
-                <li>
-                  <div class="chat-bubble-my-user">
-                    <span> <small>10:00 AM,Today</small>  Tanya <i class="fa fa-circle" aria-hidden="true"></i></span><br><br>
-                    <p>Lorem ipsum dolor sit ameeserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit ameeserunt mollit anim id est laborum.</p>
-                  </div>
-                </li>
-              </ul>
+              <ul id="messages"></ul>
             </div>
           </div>
           <div class="row">
             <div class="fixed-bottom col-12 chat-textbox">
-              <input type="text" placeholder="Type your message" autocomplete="off">
+              <input id="chatMessageInput" type="text" placeholder="Type your message" autocomplete="off">
               <i class="fa fa-arrow-right" aria-hidden="true"></i>
             </div>
           </div>
@@ -139,6 +63,8 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.slim.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
