@@ -9,6 +9,9 @@ $(document).ready(function() {
   });
   $('#enterRoomBtn').prop('disabled', true);
 
+  // Hide main chat room until we enter a username
+  $('#chatroom').hide();
+
   // enable button when username is valid
   function validateUsername(username) {
     var regex = /\w+/g;
@@ -29,5 +32,9 @@ $(document).ready(function() {
   // Close modal and enter chat room
   $('#enterRoomBtn').on('click', function() {
     $('#usernameModal').modal('hide');
+    $('#chatroom').show();
+
+    // Scroll to bottom of page to see most recent messages
+    window.scrollTo(0,document.body.scrollHeight);
   });
 });
