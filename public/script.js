@@ -1,7 +1,7 @@
 // Initial Variables
 var myUsername = null;
 var initMessages = null;
-var socket = io('http://localhost:3000');
+var socket = io();
 
 function enterChatroom() {
   $('#usernameModal').modal('hide');
@@ -43,6 +43,9 @@ function addChatBubbleToPage(bubble) {
   $('#messages').append(bubble);
 }
 
+// Hide main chat room until we enter a username
+$('#chatroom').hide();
+
 $(document).ready(function() {
   // Show username modal and disable button immediately
   $('#usernameModal').modal({
@@ -51,9 +54,6 @@ $(document).ready(function() {
     keyboard: false
   });
   $('#enterRoomBtn').prop('disabled', true);
-
-  // Hide main chat room until we enter a username
-  $('#chatroom').hide();
 
   // function fires every time we type in the input element.
   $('#usernameModalInput').on('input', function(e) {

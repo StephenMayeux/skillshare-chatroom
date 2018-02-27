@@ -1,0 +1,16 @@
+{
+  "name": "skillshare-chatroom",
+  "version": "1.0.0",
+  "description": "Redis, Express, and Websockets for realtime chat room.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "Stephen Mayeux",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2",
+    "redis": "^2.8.0",
+    "socket.io": "^2.0.4"
+  }
+}
