@@ -1,6 +1,6 @@
 var myUsername = null;
 var initMessages = null;
-var socket = io('http://localhost:3000');
+var socket = io('https://test-chat-server-10.herokuapp.com');
 
 function enterChatroom() {
   $('#usernameModal').modal('hide');
