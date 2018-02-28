@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const http = require('http');
 const socket = require('socket.io');
+const redisClient = require('./lib/redis');
 
 const app = express();
 const server = http.createServer(app);
@@ -13,6 +14,14 @@ app.get('*', (req, res) => {
 });
 
 const io = socket.listen(server);
+
+redisClient().then(connector => {
+
+  io.on('connection', socket => {
+    
+  });
+
+});
 
 const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
