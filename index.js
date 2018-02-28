@@ -18,7 +18,18 @@ const io = socket.listen(server);
 redisClient().then(connector => {
 
   io.on('connection', socket => {
-    
+    // Send 10 most recent messages to connecting client
+    connector.lrangeAsync('messages', -10, -1).then(messages => {
+      socket.emit('initMessages', messages)
+    });
+
+    // the sending client has already added their message directly to the DOM.
+    // Broadcast this event to everyone except for the sending client.
+    socket.on('sendMessage', (message) => {
+      connector.rpushAsync('messages', JSON.stringify(message)).then(response => {
+        socket.broadcast.emit('newMessage', JSON.stringify(message));
+      });
+    })
   });
 
 });
