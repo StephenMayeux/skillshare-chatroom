@@ -3,12 +3,17 @@
   "version": "1.0.0",
   "description": "Redis, Express, and Websockets for realtime chat room.",
   "main": "index.js",
+  "engines": {
+    "node": "8.8.1",
+    "yarn": "1.1.0"
+  },
   "scripts": {
     "start": "nodemon index.js"
   },
   "author": "Stephen Mayeux",
   "license": "MIT",
   "dependencies": {
+    "bluebird": "^3.5.1",
     "express": "^4.16.2",
     "redis": "^2.8.0",
     "socket.io": "^2.0.4"
